@@ -17,14 +17,16 @@ public class Withdrawal extends Bank implements Balance{
 	public void setAmount(double amount) {
 		this.amount = amount;
 	}
-	//Overriding the calculate 
+
+	//Overriding the calculate
 	@Override
 	public double calBalance() {
-		
-		return super.calBalance()- amount;
+
+		return super.calBalance() - amount;
+
 	}
 	@Override
 	public String toString() {
-		return ""+ super.toString()+ "Amount withdrawn is :" + getAmount() + "Amount after withdrawls :"+ calBalance();
+		return "\n"+ super.toString() + "\nAmount withdrawn is :" + getAmount() + "\nAmount after withdrawls :"+ calBalance();
 	}	
 }

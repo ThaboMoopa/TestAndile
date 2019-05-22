@@ -44,17 +44,27 @@ public class Assignment2 {
 		//
 		LocalDate date = LocalDate.of(2019, 05, 21);
 
-		Savings savings = new Savings("Andile Gumada", "23445657", (date), ""
+		Savings savings = new Savings("Andile Gumada", "23445657", date, ""
 				+ "42004", "Savings Account", 10000.00,7000.00);
 		System.out.println(savings.toString());
 		System.out.println("==========================");
 		
-		Withdrawal withdrawals = new Withdrawal(withdrawals.getAccountHolder(),withdrawals.getAccountNumber(),
-				withdrawals.getDateOfOpened(),withdrawals.getBranchCode(),withdrawals.getAccountType(),withdrawals.calBalance(),5000.00);
-		 System.out.println(withdrawals.toString());
-//		 Withdrawal with = new Withdrawal("Andile Gumada", "23445657",(date),
-//		 "42004"," Account", with.calBalance(),7000.00);
-		// System.out.println(with.toString());
+
+		//******You can delete *****//
+		//Withdrawal withdrawals = new Withdrawal(withdrawals.getAccountHolder(),withdrawals.getAccountNumber(),
+			//	withdrawals.getDateOfOpened(),withdrawals.getBranchCode(),withdrawals.getAccountType(),withdrawals.calBalance(),5000.00);
+		// System.out.println(withdrawals.toString());
+
+
+
+		//Thabo Changes
+		//New date added with an additional month
+		LocalDate newDate = date.plusMonths(3);
+
+		Withdrawal withdraw = new Withdrawal(savings.getAccountHolder(), savings.getAccountNumber(),
+				newDate, savings.getBranchCode(), savings.getAccountType(), 5000, savings.calBalance());
+
+		 System.out.println(withdraw.toString());
 
 		Account singleton = Account.getInstance();
 		Account singleton1 = Account.getInstance();

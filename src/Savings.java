@@ -4,6 +4,8 @@ public class Savings extends Bank implements Balance {
 
 	//
 	private double amount;
+
+
 	
 	public Savings(String accountHolder, String accountNumber, LocalDate dateOfOpened, String branchCode,
 			String accountType, double amount, double balance) {
@@ -25,12 +27,12 @@ public class Savings extends Bank implements Balance {
 	@Override
 	public double calBalance() {
 
-		return super.calBalance()+amount;
+		return super.getBalance() + amount;
 	}
 
 	@Override
 	public String toString() {
-		return ""+ super.toString() + amount + "\nAmount Deposited :" + getAmount() + "\nBalance after deposite amount :" + calBalance();
+		return "\n"+ super.toString() + "\nAmount Deposited :" + getAmount() + "\nBalance after deposite amount :" + calBalance();
 	}
 	
 }
