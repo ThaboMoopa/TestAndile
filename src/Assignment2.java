@@ -27,7 +27,7 @@ Creating Objects with the Factory Pattern
 public class Assignment2 {
 
 	public static void main(String[] args) {
-
+		System.out.println("Testing github");
 		System.out.println("======JavaBean=====");
 
 		// Instantiating the JavaBean class
